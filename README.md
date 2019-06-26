@@ -1,1 +1,0 @@
-# Calculating-Tool-with-Angular-JavaScript
