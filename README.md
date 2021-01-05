@@ -66,15 +66,15 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 
 
 		
-	/* setting variable for calculating current number of hours times total number of days */
-	
-	/* this isn't being used anywhere else.. its just additional calculations so it's temporary */
+# Setting variable for calculating current number of hours times total number of days
 	
 
  	var total_hours = $scope.total_days * $scope.current_hours;
  	var cost = $scope.current_cost / 100;
 
 		
+# Calculate total energy usage
+
 	/* In this final portion, we will multiply wattage by total number of hours to calculate energy usage */
 	
 	/* Since we need to come up with price per year to operate light bulb we will multiply wattage by 365 */
@@ -83,24 +83,21 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 	
 	/* In these values, the decimal function will be set to 2 decimal places */
 	
+	/* lets pretend the user wants to produce 600 lumens (lm). therefore, we multiply that value by the conversion rates given. */
+	
+	
 	 	$scope.inc_cost = ((($scope.inc_wattage * total_hours) / 1000) * cost).toFixed(2);
  	$scope.hal_cost = ((($scope.hal_wattage * total_hours) / 1000) * cost).toFixed(2);
  	$scope.cfl_cost = ((($scope.cfl_wattage * total_hours) / 1000) * cost).toFixed(2);
  	$scope.led_cost = ((($scope.led_wattage * total_hours) / 1000) * cost).toFixed(2);	
 
  	}
-
-	
-	
+			$scope.calculate();
+		}])
 		
-	/* lets pretend the user wants to produce 600 lumens (lm). therefore, we multiply that value by the conversion rates given. */
-	
-		$scope.calculate();
-
-}])
+		})();
 
 
-})();
 
 	
 
