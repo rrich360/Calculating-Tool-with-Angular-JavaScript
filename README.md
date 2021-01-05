@@ -13,9 +13,10 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 
 
 
-(function(){
-   	var app = angular.module('myCalculator', []);
+ 	(function(){
+	var app = angular.module('myCalculator', []);
 	}
+
 	
 	
   
