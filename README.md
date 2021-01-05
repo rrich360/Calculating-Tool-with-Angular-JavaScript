@@ -4,10 +4,15 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 # Declaring the Angular Application
 
 /* Starting this JavaScript file as this function so that this particular function can exist with other JavaScripts */
+
 /* The function inside the brackets is being defined to declare the Angular application in the HTML */
-(function(){
-	/* Below are the two main elements that define the Angular App */
+
+/* Below are the two main elements that define the Angular App */
+
 	/* Declaring the variable app to be the name 'myCalculator'*/
+
+(function(){
+	
   
 	
    	var app = angular.module('myCalculator', []);
@@ -39,7 +44,9 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 		# Define function inside scope to calculate values
     
 	/* In this portion, you have to define the function on the scope inside the controller */
+	
 	/* Creating a new variable for wattage ($scope.inc_wattage) to calculate set of values for wattage */	
+	
 	/* Also, use 'toFixed' function to set values to 1 decimal place */
 	
 		$scope.calculate = function () {
@@ -51,6 +58,7 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 
 		
 	/* This portion includes a set of calculations that will calculate the price */
+	
 	/* Need to set a conditional statement to prevent users from entering more than 24 hours in a day */	
 		
 		
@@ -59,6 +67,7 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 
 		
 	/* setting variable for calculating current number of hours times total number of days */
+	
 	/* this isn't being used anywhere else.. its just additional calculations so it's temporary */
 	
 
@@ -66,9 +75,12 @@ This Calculating Application calculates the cost of energy usage per year in Kil
  	var cost = $scope.current_cost / 100;
 
 		
-	/* In this final portion, we will multiply wattage by total number of hours to calculate energy usage */	
+	/* In this final portion, we will multiply wattage by total number of hours to calculate energy usage */
+	
 	/* Since we need to come up with price per year to operate light bulb we will multiply wattage by 365 */
+	
 	/* Wattage is always in kilowatt hours so we use 1000 as the constant value */
+	
 	/* In these values, the decimal function will be set to 2 decimal places */
 	
 	 	$scope.inc_cost = ((($scope.inc_wattage * total_hours) / 1000) * cost).toFixed(2);
@@ -83,18 +95,12 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 		
 	/* lets pretend the user wants to produce 600 lumens (lm). therefore, we multiply that value by the conversion rates given. */
 	
-		
+		$scope.calculate();
+
+}])
+
+
+})();
+
 	
-	
-	
-o	$scope.calculate();
-
-o	}])
-
-
-
-
-
-
- 	})();
 
