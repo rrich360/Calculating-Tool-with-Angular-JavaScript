@@ -9,13 +9,14 @@ This Calculating Application calculates the cost of energy usage per year in Kil
 
 /* Below are the two main elements that define the Angular App */
 
-	/* Declaring the variable app to be the name 'myCalculator'*/
+/* Declaring the variable app to be the name 'myCalculator'*/
+
+
 
 (function(){
-	
-  
-	
    	var app = angular.module('myCalculator', []);
+	}
+	
 	
   
   # Calculator Controller
